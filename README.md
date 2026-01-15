@@ -1,59 +1,99 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# LaporPak – Online Public Complaint Service
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+[![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
+[![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://mysql.com)
 
-## About Laravel
+**LaporPak** adalah sistem pengaduan masyarakat berbasis web yang memungkinkan warga melaporkan permasalahan lingkungan (jalan rusak, banjir, dll.) dan memantau status penanganannya secara online. Aplikasi ini dikembangkan sebagai proyek Ujian Akhir Semester mata kuliah **Pemrograman Web 1/3 SKS** - Universitas Teknologi Bandung.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+🌐 **Live Demo**: [laporpak.great-site.net](https://laporpak.great-site.net)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📋 Daftar Isi
 
-## Learning Laravel
+- [Fitur Utama](#-fitur-utama)
+- [Studi Kasus](#-studi-kasus)
+- [Teknologi](#-teknologi)
+- [Instalasi](#-instalasi)
+- [Akun Demo](#-akun-demo)
+- [Screenshot](#-screenshot)
+- [Video Demo](#-video-demo)
+- [Informasi UAS](#-informasi-uas)
+- [Developer](#-developer)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## ✨ Fitur Utama
 
-## Laravel Sponsors
+### 1. Autentikasi & Manajemen Session
+- ✅ Register dan Login untuk masyarakat dan petugas
+- ✅ Session management berbasis cookies
+- ✅ Multi-role access (Admin, Petugas, Masyarakat)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 2. Dashboard Interaktif
+- 📊 Statistik pengaduan (Total, Belum Diproses, Proses, Selesai)
+- 👥 Ringkasan jumlah user dan masyarakat
+- 📈 Grafik pengaduan per tahun
 
-### Premium Partners
+### 3. Manajemen Pengaduan (CRUD)
+- 📝 Masyarakat dapat membuat pengaduan + upload foto
+- 🔍 Petugas dapat melihat detail dan memberikan respon
+- 🔄 Update status pengaduan (Belum Diproses → Proses → Selesai)
+- 🔎 Pencarian, sorting, dan pagination
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 4. Manajemen Data Master
+- 👤 **CRUD Masyarakat**: kelola data NIK, username, email, telepon, alamat
+- 🛡️ **CRUD User/Petugas**: kelola akun admin dan officer dengan level akses
 
-## Contributing
+### 5. Laporan (Export PDF & Excel)
+- 📅 Filter laporan berdasarkan rentang tanggal
+- 📄 Export data pengaduan ke **PDF**
+- 📊 Export data pengaduan ke **Excel**
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 6. Track Complaint (Public)
+- 🔓 Halaman publik untuk cek status pengaduan menggunakan **NIK**
+- 📱 Tanpa perlu login
 
-## Code of Conduct
+### 7. Desain Modern & Responsif
+- 🎨 UI/UX bersih dan user-friendly
+- 📱 Responsive untuk mobile dan desktop
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## 🎯 Studi Kasus
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+> **Sistem Pelayanan Pengaduan Masyarakat Online**
 
-## License
+Masyarakat dapat melaporkan permasalahan infrastruktur dan lingkungan (jalan rusak, lampu mati, banjir, dll.) kepada petugas kelurahan/desa secara digital.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+**Alur Proses:**
+1. Masyarakat mendaftar dan login
+2. Mengisi form pengaduan + upload foto bukti
+3. Petugas menerima dan memverifikasi pengaduan
+4. Petugas memberikan respon dan update status
+5. Masyarakat dapat memantau progress melalui dashboard atau halaman Track Complaint
+
+---
+
+## 🛠️ Teknologi
+
+| Kategori | Teknologi |
+|----------|-----------|
+| **Backend** | Laravel 10/11 (PHP Framework) |
+| **Frontend** | Blade Template Engine + Bootstrap/Tailwind CSS |
+| **Database** | MySQL |
+| **Authentication** | Laravel Session-based Auth |
+| **Export** | Laravel Excel (`maatwebsite/excel`), DomPDF |
+| **Hosting** | InfinityFree (Free Hosting) |
+| **Version Control** | Git & GitHub |
+
+---
+
+## 🚀 Instalasi
+
+### Prerequisites
+- PHP >= 8.1
+- Composer
+- MySQL
+- Node.js & NPM
